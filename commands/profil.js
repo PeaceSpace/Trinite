@@ -22,7 +22,7 @@ module.exports = {
             //Si la personne a déjà un profil
             if (sql.prepare(`SELECT * FROM profil WHERE id=${message.author.id}`).get()) {
 
-                if (sql.prepare(`SELECT ban FROM profil WHERE id=${message.author.id}`).get().ban == 1) return message.channel.send("Tu a été banni du systeme de profil")
+                if (sql.prepare(`SELECT ban FROM profil WHERE id=${message.author.id}`).get().ban == 1) return message.channel.send("Tu a étais banni du systeme de profil")
                 
                 if(String(args[1]).toLowerCase() == "nom") {
                     await this.nom(message,args)
